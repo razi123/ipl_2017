@@ -7,7 +7,8 @@ import feature_ipl as feature_ipl
 from config import utils as spark_utils
 
 
-def test_match_playing_11():
+
+def test_match_playing_11(spark: SparkSession):
     """
     Test the match playing 11
     """
@@ -51,4 +52,5 @@ def test_match_playing_11():
 
 
 if __name__ == '__test_feature_ipl__':
-    spark_utils.create_spark_session()
+    spark = spark_utils.create_spark_session()
+    test_match_playing_11(spark)
